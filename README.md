@@ -18,6 +18,7 @@ En este repositorio disponemos de los escenarios:
 
 - **redes_configurar**: escenario para configuración básica de red 
 - **redes_laboratorio**: creación del escenario de las prácticas de redes
+- **redes_direccionamiento**: escenario para la tarea de direccionamiento 
 - **redes_enrutamiento**: escenario para la tarea de enrutamiento 
 
 ### Creación del escenario de la práctica
