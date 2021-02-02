@@ -1,16 +1,42 @@
 version: '3'
 services:
 #Service sa toma el Dockerfile de ./laboratorio
- net1:
+ host1:
   build: ./laboratorio
-  hostname: net1
+  hostname: host1
   privileged: true
   networks:
-   nettest:
-
+   net1:
+ host2:
+  build: ./laboratorio
+  hostname: host2
+  privileged: true
+  networks:
+   net1:
+ host3:
+  build: ./laboratorio
+  hostname: host3
+  privileged: true
+  networks:
+   net2:
+ gt1:
+  build: ./laboratorio
+  hostname: gt1
+  privileged: true
+  sysctls:
+    net.ipv4.ip_forward: 1
+  networks:
+   net1:
+   net2:
 networks:
-  nettest:
+  net1:
     driver: bridge
     ipam:
      config:
        - subnet: 192.168.2.0/24
+  net2:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 192.168.3.0/24
+
