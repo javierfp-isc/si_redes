@@ -4,14 +4,16 @@ services:
  cred1:
   build: ./laboratorio
   hostname: cred1
-  privileged: true
+  cap_add:
+  - ALL
   networks:
    lan1si:
     ipv4_address: 192.168.101.11
  cred2:
   build: ./laboratorio
   hostname: cred2
-  privileged: true
+  cap_add:
+  - ALL
   sysctls:
     net.ipv4.ip_forward: 1
   networks:
@@ -22,14 +24,16 @@ services:
  cred3:
   build: ./laboratorio
   hostname: cred3
-  privileged: true
+  cap_add:
+  - ALL
   networks:
    lan2si:
     ipv4_address: 192.168.102.23
  cred4:
   build: ./laboratorio
   hostname: cred4
-  privileged: true
+  cap_add:
+  - ALL
   sysctls:
     net.ipv4.ip_forward: 1
   networks:
@@ -40,14 +44,16 @@ services:
  cred5:
   build: ./laboratorio
   hostname: cred5
-  privileged: true
+  cap_add:
+  - ALL
   networks:
    lan3si:
     ipv4_address: 192.168.103.35
  cred6:
   build: ./laboratorio
   hostname: cred6
-  privileged: true
+  cap_add:
+  - ALL
   sysctls:
     net.ipv4.ip_forward: 1
   networks:

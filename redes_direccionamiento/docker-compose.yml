@@ -4,31 +4,36 @@ services:
  host1:
   build: ./laboratorio
   hostname: host1
-  privileged: true
+  cap_add:
+  - ALL
   networks:
    red3:
  host2:
   build: ./laboratorio
   hostname: host2
-  privileged: true
+  cap_add:
+  - ALL
   networks:
    red3:
  host3:
   build: ./laboratorio
   hostname: host3
-  privileged: true
+  cap_add:
+  - ALL
   networks:
    red5:
  host4:
   build: ./laboratorio
   hostname: host4
-  privileged: true
+  cap_add:
+  - ALL
   networks:
    red5:
  enc35:
   build: ./laboratorio
   hostname: enc35
-  privileged: true
+  cap_add:
+  - ALL
   sysctls:
     net.ipv4.ip_forward: 1
   networks:

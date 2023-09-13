@@ -4,21 +4,24 @@ services:
  adm1:
   build: ./laboratorio
   hostname: adm1
-  privileged: true
+  cap_add:
+  - ALL
   networks:
    administracion:
     ipv4_address: 192.168.110.111
  adm2:
   build: ./laboratorio
   hostname: adm2
-  privileged: true
+  cap_add:
+  - ALL
   networks:
    administracion:
     ipv4_address: 192.168.110.112
  pe1:
   build: ./laboratorio
   hostname: pe1
-  privileged: true
+  cap_add:
+  - ALL
   sysctls:
     net.ipv4.ip_forward: 1
   networks:
@@ -31,7 +34,8 @@ services:
  god10:
   build: ./laboratorio
   hostname: god10
-  privileged: true
+  cap_add:
+  - ALL
   networks:
    administracion:
     ipv4_address: 192.168.110.120
@@ -40,28 +44,32 @@ services:
  dir1:
   build: ./laboratorio
   hostname: dir1
-  privileged: true
+  cap_add:
+  - ALL
   networks:
    direccion:
     ipv4_address: 192.168.111.112
  sat1:
   build: ./laboratorio
   hostname: sat1
-  privileged: true
+  cap_add:
+  - ALL
   networks:
    sat:
     ipv4_address: 192.168.112.113
  sat10:
   build: ./laboratorio
   hostname: sat10
-  privileged: true
+  cap_add:
+  - ALL
   networks:
    sat:
     ipv4_address: 192.168.112.122
  pe2:
   build: ./laboratorio
   hostname: pe2
-  privileged: true
+  cap_add:
+  - ALL
   sysctls:
     net.ipv4.ip_forward: 1
   networks:
@@ -72,7 +80,8 @@ services:
  server1:
   build: ./laboratorio
   hostname: server1
-  privileged: true
+  cap_add:
+  - ALL
   networks:
    dmz:
     ipv4_address: 192.168.120.121
